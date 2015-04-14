@@ -28,17 +28,15 @@ private:
 	int flag;
 	std::string lastErr;
 	cv::Mat img;
+	cv::Mat frame;
 	cv::Mat map1,map2;
 	bool mustInitUndistort = false;
 	bool isCalibration = false;
 	bool addOneChessBoardPoints(cv::Mat&image, cv::Size & boardSize);
 	void addPoints(TV2Dp &imageCornerts, TV3Dp &objectCornerts);
 	double calibrate(cv::Size&imageSize);
-
 	std::vector<std::string>vfilelist;
 	int num = 0;
-    cv::VideoCapture cap;
-    cv::Mat frame;
 public:
 	CCamcalibration();
 	~CCamcalibration();
